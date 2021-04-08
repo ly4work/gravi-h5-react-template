@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="antd,umi,umijs,ant design,脚手架,布局, Ant Design,项目,Pro,admin,控制台,主页,开箱即用,中后台,解决方案,组件库"
+    />
+    <meta
+    name="description"
+    content="umi-react-h5"
+    />
+  <meta
+    name="description"
+    content="
+    数据资产化，资产数据化"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <link rel="icon" href="<%= context.config.publicPath +'favicon.ico'%>" type="image/x-icon" />
+
+    <title>h5-react-template-project</title>
+
+    <script>
+      (function(window, document) {
+        function resize() {
+          var ww = window.innerWidth;
+          if (ww > window.screen.width) {
+            window.requestAnimationFrame(resize);
+          } else {
+            if (ww > 750) {
+              ww = 750;
+            }
+            document.documentElement.style.fontSize = (ww * 100) / 750 + "px";
+          }
+        }
+
+        resize();
+
+        window.addEventListener("resize", resize);
+        window.addEventListener("pageshow", function(e) {
+          if (e.persisted) {
+            resize();
+          }
+        });
+
+        /**判断屏幕大小 */
+        function judgeBigScreen() {
+          //，这里根据返回值 true 或false ,返回true的话 则为全面屏
+          let result = false;
+          const rate = window.screen.height / window.screen.width;
+          let limit =
+            window.screen.height == window.screen.availHeight ? 1.8 : 1.65; // 临界判断值
+
+          // window.screen.height为屏幕高度
+          //  window.screen.availHeight 为浏览器 可用高度
+
+          if (rate > limit) {
+            result = true;
+          }
+          return result;
+        }
+        window.judgeBigScreen = judgeBigScreen;
+      })(window, document);
+    </script>
+    <script>
+      window.__ENV__ = {
+        isBigScreen: window.judgeBigScreen(),
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
