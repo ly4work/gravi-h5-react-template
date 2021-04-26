@@ -19,9 +19,14 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
   />
   <link rel="icon" href="<%= context.config.publicPath +'favicon.ico'%>" type="image/x-icon" />
-
+    <script src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.10.3/dingtalk.open.js"></script>
     <title>h5-react-template-project</title>
-
+    <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.2.0"></script>
+    <script>
+        // init vConsole
+        var vConsole = new VConsole();
+        console.log('Hello world');
+    </script>
     <script>
       (function(window, document) {
         function resize() {
