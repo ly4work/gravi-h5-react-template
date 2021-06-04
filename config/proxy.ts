@@ -1,7 +1,7 @@
 const proxy: { [key: string]: Object } = {
   dev: {
     '/api/': {
-      target: 'http://gateway-dev.gaojin.com.cn',
+      target: 'https://proapi.azurewebsites.net/',
       changeOrigin: true,
       pathRewrite: {
         '^': '',
