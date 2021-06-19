@@ -1,0 +1,33 @@
+.za-cell__inner {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.pt-multi-radio-label {
+  min-width: 60px;
+  font-size: 14px;
+}
+.pl {
+  height: 48px;
+  line-height: 48px;
+  /* padding-left: 16px; */
+}
+.pt-multi-radio-wrapper {
+  padding: 0 16px;
+}
+.pt-multi-radio-inner {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid #eee;
+}
+.pt-diy-radio-box {
+  padding: 5px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* padding-right: 16px; */
+}
+
+.pt-cas-wrapper .za-cell__body {
+  display: none;
+}

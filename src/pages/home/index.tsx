@@ -44,7 +44,6 @@ const Home = (props: IProps) => {
     setActiveKey(key);
     history.push(key);
   };
-  console.log(123, currentUser);
   return (
     <>
       {props.children}

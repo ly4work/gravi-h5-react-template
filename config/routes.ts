@@ -1,8 +1,24 @@
 //  user 相关路由
 export const userRoutes = [];
+export const widgetRoutes = [
+  {
+    path: '/widget',
+    routes: [
+      {
+        path: '/widget/form-pages',
+        name: 'form-pages',
+        component: '@/pages/form-pages/index',
+      },
+    ],
+  },
+];
 
 //  pages 相关路由
 export const pageRoutes = [
+  {
+    path: '/',
+    redirect: '/home',
+  },
   {
     path: '/home',
     component: '@/pages/home/index',
@@ -24,6 +40,6 @@ export const pageRoutes = [
 export default [
   {
     path: '/',
-    routes: [...userRoutes, ...pageRoutes],
+    routes: [...userRoutes, ...pageRoutes, ...widgetRoutes],
   },
 ];
