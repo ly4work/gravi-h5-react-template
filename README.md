@@ -1,6 +1,6 @@
 # gravi-h5-react-template
 
-> 运营管理后台通用模板，基于 UmiJS+Antd/Antd-Pro
+> 移动端h5-react模板，基于 UmiJS+Antd/Antd-Pro
 
 ### ✨ 基础核心依赖
 
