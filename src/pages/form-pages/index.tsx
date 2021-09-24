@@ -9,21 +9,21 @@ const FormPage = () => {
       type: 'text',
       label: '拜访目的',
       defaultValue: '搞钱',
-      readOnly: true,
+      readOnly: false,
     },
     {
       name: 'amount',
       type: 'price',
       label: '交易金额',
       defaultValue: '12.82',
-      readOnly: true,
+      readOnly: false,
     },
     {
       name: 'visitTime',
       type: 'time',
       label: '拜访时间',
       defaultValue: new Date(),
-      readOnly: true,
+      readOnly: false,
     },
     {
       type: 'diy',
@@ -33,7 +33,7 @@ const FormPage = () => {
         return <span>123</span>;
         // return <GjLocation></GjLocation>;
       },
-      readOnly: true,
+      readOnly: false,
     },
     {
       name: 'productType',
@@ -44,7 +44,7 @@ const FormPage = () => {
         { value: '1002', label: '猪后腿' },
         { value: '1003', label: '猪白条J1' },
       ],
-      readOnly: true,
+      readOnly: false,
       defaultValue: '1003',
     },
     {
@@ -57,7 +57,7 @@ const FormPage = () => {
         { value: '1003', label: '差' },
       ],
       defaultValue: '1002',
-      readOnly: true,
+      readOnly: false,
     },
     {
       name: 'jyzt',
@@ -70,7 +70,7 @@ const FormPage = () => {
         { value: '1004', label: '政府/军队' },
         { value: '1005', label: '公司' },
       ],
-      readOnly: true,
+      readOnly: false,
     },
     {
       name: 'jytd',
@@ -93,7 +93,7 @@ const FormPage = () => {
         },
         { value: '1002', label: '无', children: [], isMultiple: false },
       ],
-      readOnly: true,
+      readOnly: false,
       defaultValue: {
         mainVal: '1001',
         subVal: ['10014', '10016'],
@@ -107,7 +107,7 @@ const FormPage = () => {
       showLength: true,
       rows: 5,
       maxLength: 200,
-      readOnly: true,
+      readOnly: false,
     },
   ];
   const initialValues = {
@@ -118,7 +118,15 @@ const FormPage = () => {
   return (
     <div>
       <PtForm ref={formRef} columns={columns} initialValues={initialValues} />
-      <Button block theme="primary">
+      <Button
+        block
+        theme="primary"
+        onClick={() => {
+          const values = formRef.current.getValues();
+          console.log(values);
+          console.log(formRef);
+        }}
+      >
         提交
       </Button>
     </div>

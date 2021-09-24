@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:local": "cross-env BUILD_ENV=local umi dev",
-    "dev:dev": "cross-env UMI_ENV=dev BUILD_ENV=dev umi dev",
+    "dev:dev": "cross-env BUILD_ENV=dev umi dev",
     "dev:test": "cross-env UMI_ENV=dev BUILD_ENV=test umi dev",
     "dev:uat": "cross-env UMI_ENV=dev BUILD_ENV=test umi dev",
     "yx-build:dev": "cross-env BUILD_ENV=dev umi build",
